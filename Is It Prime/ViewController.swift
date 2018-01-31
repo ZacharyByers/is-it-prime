@@ -11,7 +11,17 @@ import UIKit
 class ViewController: UIViewController {
   
   func isPrime(_ number: Int) -> Bool {
-    return number > 1 && !(2..<number).contains { number % $0 == 0 }
+    var i = 2
+    if number < i {
+      return false
+    }
+    while i < number {
+      if number % i == 0 {
+        return false
+      }
+      i += 1
+    }
+    return true
   }
 
   @IBOutlet weak var primeField: UITextField!
