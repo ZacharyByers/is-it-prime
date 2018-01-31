@@ -37,6 +37,8 @@ class ViewController: UIViewController {
         primeOutput.text = "Ooh, nope, \(input) is not prime."
         primeField.text = ""
       }
+    } else {
+      primeOutput.text = "Enter a valid whole number, silly."
     }
   }
   
